@@ -13,7 +13,7 @@ https://www.php-einfach.de/experte/php-codebeispiele/loginscript/
 ) ENGINE = InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
          */
 session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+$pdo = new PDO('mysql:host=localhost;dbname=test', 'root', 'password');
  
 if(isset($_GET['login'])) {
     $email = $_POST['email'];
@@ -23,7 +23,7 @@ if(isset($_GET['login'])) {
     $result = $statement->execute(array('email' => $email));
     $user = $statement->fetch();
         
-    //Überprüfung des Passworts
+    //Überprüfung des Passworts - verification of the password
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
         $_SESSION['userid'] = $user['id'];
         die('Login erfolgreich. Weiter zu <a href="geheim.php">internen Bereich</a>');
@@ -128,5 +128,4 @@ Dein Passwort:<br>
   
 		</body>
 
-		
 </html>
