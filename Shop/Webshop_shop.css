@@ -1,0 +1,128 @@
+p {
+    margin: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #FFBF00;
+  color: white;
+}
+
+main > p {
+    text-transform: uppercase;
+    margin: 10px;
+    font-weight: bold;
+    float: left;
+}
+
+main > div {
+    margin: 10px;
+}
+body {
+	background-image: url("background_body.jpg");
+}
+
+.flex-container {
+    display: flex;
+}
+
+.vertical-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.item {
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.item-picture {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
+
+.item-picture > img {
+    max-height: 250px;
+    max-width: 250px;
+    margin: auto;
+}
+
+.item p {
+    font-size: smaller;
+    margin-top: 10px;
+}
+
+.item ul {
+    margin-top: 10px;
+    font-size: smaller;
+    height: 75px;
+}
+
+.item-label {
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.item-label-neu {
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.item-label-neu::before {
+    color: var(--sogyo-groen);
+    content: "NEU!!!";
+    margin-right: 5px;
+}
+
+.score {
+    font-style: italic;
+}
+
+.preis-original {
+    color: #9F4A5D;
+    font-size: larger;
+    margin-left: 10px;
+    text-decoration: line-through;
+}
+
+.preis {
+    color: maroon;
+    font-size: x-large;
+    font-weight: bold;
+    margin: 5px 10px;
+}
+
+.morgen-zu-hause {
+    color: #007936;
+}
+
+.zum-einkaufswagen-hinzufuegen {
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.zum-einkaufswagen-hinzufuegen > audio {
+    position: relative;
+    z-index: 2;
+    top: -5px;
+    left: -5px;
+    opacity: 0.01;
+}
+
+.zum-einkaufswagen-hinzufuegen > img {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+}
